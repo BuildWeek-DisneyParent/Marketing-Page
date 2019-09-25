@@ -289,10 +289,29 @@ footer p {
   text-align: center;
   margin: 5% auto;
 }
+.description h3 {
+  margin: 5% 0;
+}
+.description h3 span {
+  font-style: italic;
+}
+.description p {
+  font-size: 2rem;
+}
+.description p span {
+  font-style: italic;
+}
 @media (max-width: 500px) {
   .description p {
     font-size: 1.8rem;
   }
+}
+.description .features {
+  margin-top: 3%;
+}
+.description .features p {
+  font-size: 1.7rem;
+  line-height: 1.5;
 }
 .profilepicstop {
   display: flex;
