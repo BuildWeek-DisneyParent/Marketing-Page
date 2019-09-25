@@ -214,16 +214,13 @@ header .mobilemenu {
     left: -200px;
     top: 0;
     height: 100%;
-    overflow-y: scroll;
-    overflow-x: visible;
-    transition: left 0.3s ease, box-shadow 0.3s ease;
     z-index: 999;
   }
   header .mobilemenu .main-menu ul {
     list-style: none;
     margin: 0;
     padding: 2.5em 0 0;
-    box-shadow: -8px 0 8px rgba(0, 0, 0, 0.5);
+    box-shadow: #8BD8D2;
     min-height: 100%;
     width: 200px;
     background: #8BD8D2;
@@ -233,7 +230,7 @@ header .mobilemenu {
     padding: 0.75em 15px;
     line-height: 1em;
     font-size: 1em;
-    color: #fff;
+    color: #FFFBFA;
     text-decoration: none;
   }
   header .mobilemenu .main-menu a:hover,
@@ -251,16 +248,11 @@ header .mobilemenu {
     display: block;
     left: 0;
     outline: none;
-    box-shadow: 3px 0 12px rgba(0, 0, 0, 0.25);
+    box-shadow: 3px 0 12px #8BD8D2;
   }
   header .mobilemenu .main-menu:target .menu-close,
   header .mobilemenu .main-menu[aria-expanded="true"] .menu-close {
     z-index: 1001;
-  }
-  header .mobilemenu .main-menu:target ul,
-  header .mobilemenu .main-menu[aria-expanded="true"] ul {
-    position: relative;
-    z-index: 1000;
   }
   header .mobilemenu .main-menu:target + .backdrop,
   header .mobilemenu .main-menu[aria-expanded="true"] + .backdrop {
@@ -271,14 +263,9 @@ header .mobilemenu {
     width: 100%;
     height: 100%;
     z-index: 998;
-    background: #000;
-    background: rgba(0, 0, 0, 0.85);
+    background: #8BD8D2;
+    background: rgba(139, 216, 210, 0.6);
     cursor: default;
-  }
-  header .mobilemenu (position: fixed) .main-menu,
-  header .mobilemenu (position: fixed) .main-menu:target + .backdrop,
-  header .mobilemenu (position: fixed) .main-menu[aria-expanded="true"] + .backdrop {
-    position: fixed;
   }
 }
 @media (max-width: 500px) {
