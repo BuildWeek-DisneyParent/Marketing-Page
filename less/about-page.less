@@ -1,0 +1,88 @@
+﻿.top_heading {
+    width: 100%;
+    background-image: url("img/sunset.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 553px;
+    display: flex;
+    align-items: center;
+    @media @phone{
+        background-size: contain;
+        min-height: 208px;
+    }
+
+    h1{
+        width: 25%;
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+        background-color: @mainbackgroundcolor;
+        margin: 10%;
+
+        @media @phone {
+            width: 30%;
+            font-size: 3.6rem;
+        }
+    }
+}
+
+.description {
+    width: 75%;
+    text-align: center;
+    margin:  5% auto;
+    
+    p{
+    @media @phone{
+        font-size:1.8rem;
+    }
+    }
+}
+
+.profilepicstop {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 5%;
+
+    @media @phone{
+        flex-direction: column;
+    }
+
+    div {
+        text-align: center;
+        padding: 5%;
+
+        img {
+            padding-bottom: 4%;
+        }
+
+        i{
+            padding-top: 4%;
+        }
+    }
+}
+
+.profilepicsbottom {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 5%;
+
+    @media @phone {
+        flex-direction: column;
+    }
+
+    div {
+        text-align: center;
+        padding: 0 5%;
+        margin-bottom: 2%;
+    }
+
+    img {
+        padding-bottom: 4%;
+    }
+
+    i {
+        padding: 4% 0;
+    }
+}
+
