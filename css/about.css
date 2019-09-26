@@ -178,6 +178,10 @@ p {
     width: 20%;
   }
 }
+.hover {
+  background: #FFFBFA;
+  color: #8BD8D2;
+}
 body {
   background-color: #E5E5E5;
 }
@@ -185,6 +189,84 @@ header {
   display: flex;
   justify-content: space-between;
   margin: 1% 5%;
+}
+header .mobilemenu {
+  display: none;
+}
+@media (max-width: 500px) {
+  header .mobilemenu {
+    display: flex;
+  }
+  header .mobilemenu .menu-toggle {
+    display: inline-block;
+    padding: 0.75em 15px;
+    line-height: 1em;
+    font-size: 1em;
+    color: black;
+  }
+  header .mobilemenu .menu-toggle:hover,
+  header .mobilemenu .menu-toggle:focus {
+    color: black;
+  }
+  header .mobilemenu .main-menu {
+    position: absolute;
+    display: none;
+    left: -200px;
+    top: 0;
+    height: 100%;
+    z-index: 999;
+  }
+  header .mobilemenu .main-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 2.5em 0 0;
+    box-shadow: #8BD8D2;
+    min-height: 100%;
+    width: 200px;
+    background: #8BD8D2;
+  }
+  header .mobilemenu .main-menu a {
+    display: block;
+    padding: 0.75em 15px;
+    line-height: 1em;
+    font-size: 1em;
+    color: #FFFBFA;
+    text-decoration: none;
+  }
+  header .mobilemenu .main-menu a:hover,
+  header .mobilemenu .main-menu a:focus {
+    background: #FFFBFA;
+    color: #8BD8D2;
+  }
+  header .mobilemenu .main-menu .menu-close {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  header .mobilemenu .main-menu:target,
+  header .mobilemenu .main-menu[aria-expanded="true"] {
+    display: block;
+    left: 0;
+    outline: none;
+    box-shadow: 3px 0 12px #8BD8D2;
+  }
+  header .mobilemenu .main-menu:target .menu-close,
+  header .mobilemenu .main-menu[aria-expanded="true"] .menu-close {
+    z-index: 1001;
+  }
+  header .mobilemenu .main-menu:target + .backdrop,
+  header .mobilemenu .main-menu[aria-expanded="true"] + .backdrop {
+    position: absolute;
+    display: block;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 998;
+    background: #8BD8D2;
+    background: rgba(139, 216, 210, 0.6);
+    cursor: default;
+  }
 }
 @media (max-width: 500px) {
   header img {
@@ -200,8 +282,7 @@ header nav {
 }
 @media (max-width: 500px) {
   header nav {
-    font-size: 1.2rem;
-    width: 50%;
+    display: none;
   }
 }
 header nav a {
@@ -289,10 +370,29 @@ footer p {
   text-align: center;
   margin: 5% auto;
 }
+.description h3 {
+  margin: 5% 0;
+}
+.description h3 span {
+  font-style: italic;
+}
+.description p {
+  font-size: 2rem;
+}
+.description p span {
+  font-style: italic;
+}
 @media (max-width: 500px) {
   .description p {
     font-size: 1.8rem;
   }
+}
+.description .features {
+  margin-top: 3%;
+}
+.description .features p {
+  font-size: 1.7rem;
+  line-height: 1.5;
 }
 .profilepicstop {
   display: flex;
